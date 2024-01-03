@@ -1,0 +1,13 @@
+AddDefaultCharset UTF-8
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    IndexIgnore */*
+
+    Options FollowSymlinks
+    RewriteEngine on
+    #RedirectMatch 301 /backend(.*) http://backend.teacher.local
+    # RewriteCond %{HTTPS} off
+	#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteRule ^$ frontend/web/            [L]
+    RewriteRule ^(.+)?$ frontend/web/$1     [L]
+</IfModule> 

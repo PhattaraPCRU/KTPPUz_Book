@@ -1,0 +1,14 @@
+body {
+	font-size:16px;
+	font-family: "thsarabunpsk";
+}
+table {
+	border-collapse: separate;
+    border-spacing: 0;
+}
+td{
+	padding: 2px;
+}
+.table-border, .table-border td{
+	border:0.1px solid black;
+}
